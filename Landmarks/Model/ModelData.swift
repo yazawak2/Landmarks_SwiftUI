@@ -1,11 +1,9 @@
-//
-//  ModelData.swift
-//  Landmarks
-//
-//  Created by Kojiro Yazawa on 2021/12/16.
-//
-
 import Foundation
+import Combine
+
+final class ModelData: ObservableObject {
+    @Published var landmarks: [Landmark] = load("landmarkData.json")
+}
 
 var landmarks: [Landmark] = load("landmarkData.json")
 
